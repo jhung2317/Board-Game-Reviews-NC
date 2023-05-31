@@ -33,6 +33,20 @@
   }
 }
 
+section.categoryCard{
+  margin: 2pc; 
+  padding: 1vh;
+}
+
+section.reviewCard{
+  margin: 2pc; 
+  padding: 1vh;
+}
+
+h3{
+  font-size: 1.4em;
+}
+
 .card {
   padding: 2em;
 }

@@ -1,0 +1,18 @@
+.u-text-transform 
+{   font-weight: 400;
+    box-sizing: border-box;
+    margin: 10px;
+    vertical-align: baseline;
+    background-color: var(--color-button-background);
+    border: .5ex solid;
+    border-radius: 20px;
+    border-color: var(--color-body-background);
+    color: var(--color-button-text);
+    font-size: 1rem;
+    letter-spacing: .15ch;
+    line-height: 1.3;
+    padding: .75rem 1rem;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color .3s ease-in-out,color .2s ease-in-out,letter-spacing .2s ease-in-out;
+}
