@@ -1,21 +1,28 @@
+import axios from 'axios'
+const API = axios.create({ baseURL: 'https://ncgames-tsyc.onrender.com/api' })
+
 export const getAllCategories = () => {
-  return fetch("https://ncgames-tsyc.onrender.com/api/categories")
-    .then((res) => {
-      return res.json();
+  return API.get("/categories")
+    .then(({data}) => {
+      console.log(data.category)
+      return data.category
     })
-    .then(({ category }) => {
-      return category;
-    });
+    .catch((error) => {
+      // handle error
+      console.log(error);
+  })
 };
 
 export const getAllReviews = () => {
-  return fetch("https://ncgames-tsyc.onrender.com/api/reviews")
-    .then((res) => {
-      return res.json();
+  return API.get("/reviews")
+    .then(({data}) => {
+      console.log(data.Review)
+      return data.Review
     })
-    .then(({ Review }) => {
-      return Review;
-    });
+    .catch((error) => {
+      // handle error
+      console.log(error);
+  })
 };
 
 export default { getAllCategories, getAllReviews};
