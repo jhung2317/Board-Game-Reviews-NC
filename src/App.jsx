@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Route, Routes } from "react-router-dom";
 import CategoryList from './components/CategoryList';
-import './app.css'
+import './App.css'
 import NavBar from "./components/NavBar";
 import ReviewList from './components/ReviewList';
 import WelcomeMessage from "./components/WelcomeMessage";

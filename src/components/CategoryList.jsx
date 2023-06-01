@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 import { getAllCategories } from "../utils/utils";
-import '../app.css'
+import '../App.css'
 
 function CategoryList({category, setCategory}) {
   
@@ -20,7 +20,7 @@ function CategoryList({category, setCategory}) {
       <h2>All Categories</h2>
       {category.map((cat) => {
         return (
-          <section class="categoryCard" style={{border: "1px solid grey"}}>
+          <section className="categoryCard" style={{border: "1px solid grey"}}>
           <h3>{cat.slug}</h3>
           <p>{cat.description}</p>
           <button
