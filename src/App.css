@@ -3,7 +3,9 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  
 }
+
 
 .logo {
   height: 6em;
@@ -36,6 +38,7 @@
 section.categoryCard{
   margin: 2pc; 
   padding: 1vh;
+  padding-bottom: 3vh;
 }
 
 section.reviewCard{

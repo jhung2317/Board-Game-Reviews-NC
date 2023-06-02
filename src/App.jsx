@@ -5,20 +5,25 @@ import './App.css'
 import NavBar from "./components/NavBar";
 import ReviewList from './components/ReviewList';
 import WelcomeMessage from "./components/WelcomeMessage";
+import ReviewPage from './components/ReviewPage';
 
 
 function App() {
-  const [category, setCategory] = useState([]);
-  const [reviewList, setReviewList] = useState([]);
+  const [filter, setFilter] = useState("");
 
   return (
     <div>
       <h1>Welcome to My Games Reviews</h1>
-      <NavBar />
+      <NavBar setFilter={setFilter}/>
       <Routes>
         <Route path="/" element={<WelcomeMessage />}></Route>
-        <Route path="/ReviewList" element={<ReviewList reviewList={reviewList} setReviewList={setReviewList}/>}></Route>
-        <Route path="/CategoryList" element={<CategoryList category={category} setCategory={setCategory}/>}></Route>
+        <Route path="/ReviewList" 
+        element={<ReviewList 
+        filter={filter}
+        />}> 
+        </Route>
+        <Route path="/CategoryList" element={<CategoryList setFilter={setFilter}/>}></Route>
+        <Route path="/reviews/:review_id" element={<ReviewPage />} />
       </Routes>
     </div>
   );

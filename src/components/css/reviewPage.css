@@ -1,0 +1,30 @@
+table, td, th {
+  border: 1px solid black;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  
+}
+
+td {
+  text-align: center;
+}
+
+.form-control {
+  width: 70%;
+
+}
+.submit-button{
+
+}
+
+.voting-box{
+  border-style: groove;
+  width: 15%;
+  align-items: center;
+  justify-content: center;
+  display: inline-flex;
+  border-radius: 20px;
+}
