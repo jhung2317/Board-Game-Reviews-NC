@@ -18,10 +18,10 @@ function CommentCard (comment) {
             </tr>
           </thead>
         <tbody className="table-body">
-        <tr>
+        <tr >
           <td>{formattedDate}</td>
           <td>{author}</td>
-          <td>{body}</td>
+          <td >{body}</td>
           <td>{votes}</td>
         </tr>
         </tbody>

@@ -6,6 +6,7 @@ import CommentList from "./CommentList";
 
 function ReviewPage() {
   const {review_id} = useParams();
+  const [isLoading, setIsLoading] = useState(true);
   const [singleReview, setSingleReview] = useState({});
   const {
     title,
@@ -24,8 +25,13 @@ function ReviewPage() {
     getReviewById(review_id)
       .then((review) => {
         setSingleReview(review[0])
+        setIsLoading(false);
       })
   }, []);
+
+  if (isLoading) {
+    return <p>Loading...</p>;
+  }
   
   return (
     <main>

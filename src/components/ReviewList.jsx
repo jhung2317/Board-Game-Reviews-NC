@@ -5,14 +5,18 @@ import ReviewCard from "./ReviewCard";
 
 function ReviewList({filter}) {
   const [reviewList, setReviewList] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     getAllReviews(filter).then((review) => {
       setReviewList(review)
+      setIsLoading(false);
     });
   }, []);
 
-  
+  if (isLoading) {
+    return <p>Loading...</p>;
+  }
 
   return (
     <section>

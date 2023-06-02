@@ -6,20 +6,27 @@ import { getCommentsByReviewId } from "../utils/utils";
 function CommentList() {
   const { review_id } = useParams();
   const [commentList, setCommentList] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+
 
   useEffect(() => {
     getCommentsByReviewId(review_id)
       .then((comment) => {
         setCommentList(comment)
+        setIsLoading(false);
       })
   }, []);
+
+  if (isLoading) {
+    return <p>Loading...</p>;
+  }
 
   if (!commentList) {
     return (
       <main >
-              <h4><u>Comments to This Review</u></h4>
+        <h4><u>Comments to This Review</u></h4>
         <h3>
-          Look like there is nothing here. Why not start the conversation?
+          There is no comment for this review. Wanna start a conversation?
         </h3>
         <form>
           <textarea
