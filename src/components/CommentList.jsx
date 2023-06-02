@@ -24,24 +24,32 @@ function CommentList() {
   if (!commentList) {
     return (
       <main >
-        <h4><u>Comments to This Review</u></h4>
-        <h3>
+        <h4>
           There is no comment for this review. Wanna start a conversation?
-        </h3>
+        </h4>
         <form>
-          <textarea
+        <div className="new-comment-area"><textarea
             required
             name="review_body"
             className="form-control"
             placeholder="What do you think?"
           ></textarea>
+          <button className="submit-button">Submit</button></div>
         </form>
       </main>
     );
   }
   return (
     <main>
-      <h4><u>Comments to This Review</u></h4>
+      <form>
+        <div className="new-comment-area"><textarea
+            required
+            name="review_body"
+            className="form-control"
+            placeholder="What do you think?"
+          ></textarea>
+          <button className="submit-button">Submit</button></div>
+        </form>
       {
       commentList.map((comment) => {
           return <CommentCard key={comment.comment_id} comment={comment} />;

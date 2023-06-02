@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { getReviewById } from "../utils/utils";
 import moment from "moment";
 import CommentList from "./CommentList";
+import './css/reviewPage.css'
 
 function ReviewPage() {
   const {review_id} = useParams();
@@ -42,6 +43,8 @@ function ReviewPage() {
         <h4 ><u> Review: </u></h4>
         <p className="review_body"> {review_body}</p>
         <p className="Author"> Designed by: {designer}</p>
+        <p class="voting-box">{votes}</p>
+        <h4><u>Comments to This Review</u></h4>
       <CommentList/>
       </article>
 

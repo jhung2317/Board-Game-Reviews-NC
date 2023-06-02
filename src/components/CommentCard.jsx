@@ -5,7 +5,6 @@ function CommentCard (comment) {
   const { comment_id, votes, created_at, author, body } = comment.comment;
 
   const formattedDate = moment(created_at).format("D MMM YYYY");
-  console.log(comment)
   return (
     <main>
       <table>
@@ -13,8 +12,8 @@ function CommentCard (comment) {
             <tr>
               <th scope="col">Date</th>
               <th scope="col">Auther</th>
-              <th scope="col">Comments</th>
-              <th scope="col">Votes</th>
+              <th>Comments</th>
+              <th >Votes</th>
             </tr>
           </thead>
         <tbody className="table-body">
