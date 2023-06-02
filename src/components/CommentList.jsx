@@ -14,12 +14,32 @@ function CommentList() {
       })
   }, []);
 
+  if (!commentList) {
+    return (
+      <main >
+              <h4><u>Comments to This Review</u></h4>
+        <h3>
+          Look like there is nothing here. Why not start the conversation?
+        </h3>
+        <form>
+          <textarea
+            required
+            name="review_body"
+            className="form-control"
+            placeholder="What do you think?"
+          ></textarea>
+        </form>
+      </main>
+    );
+  }
   return (
     <main>
       <h4><u>Comments to This Review</u></h4>
-      {commentList.map((comment) => {
+      {
+      commentList.map((comment) => {
           return <CommentCard key={comment.comment_id} comment={comment} />;
-        })}
+        })
+        }
     </main>
   );
 }

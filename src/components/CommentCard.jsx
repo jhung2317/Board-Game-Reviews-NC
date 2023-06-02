@@ -1,5 +1,5 @@
 import moment from "moment";
-
+import './css/reviewPage.css'
 
 function CommentCard (comment) {
   const { comment_id, votes, created_at, author, body } = comment.comment;
@@ -9,7 +9,7 @@ function CommentCard (comment) {
   return (
     <main>
       <table>
-      <thead className="table-dark">
+      <thead className="table-head">
             <tr>
               <th scope="col">Date</th>
               <th scope="col">Auther</th>
@@ -17,7 +17,7 @@ function CommentCard (comment) {
               <th scope="col">Votes</th>
             </tr>
           </thead>
-        <tbody>
+        <tbody className="table-body">
         <tr>
           <td>{formattedDate}</td>
           <td>{author}</td>
