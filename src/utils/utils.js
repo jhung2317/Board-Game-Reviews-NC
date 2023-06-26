@@ -46,3 +46,18 @@ export const getCommentsByReviewId = (review_id) => {
     console.log(error);
   })
 };
+
+export const updateVoteOfReview = (review_id, inc_votes) => {
+  return API.patch(`/reviews/${review_id}`, { inc_votes })
+  .then(({data}) => data)
+  .catch((error) => {
+    console.log(error);
+  })
+};
+export const updateVoteOfComment = (comment_id, inc_votes) => {
+  return API.patch(`/comments/${comment_id}`, { inc_votes })
+  .then(({data}) => data)
+  .catch((error) => {
+    console.log(error);
+  })
+};
